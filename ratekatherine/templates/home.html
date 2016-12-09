@@ -127,7 +127,7 @@
         updateComments();
     });
 
-    $('.post_comment').on('click', function () {
+    function postComment() {
         var comment_text_element = $('.comment_text');
         var text = comment_text_element.val();
 
@@ -145,6 +145,16 @@
                 updateComments();
             }
         });
+    }
+
+    $(".user_form input").on('keyup', function (e) {
+        if (e.keyCode == 13) {
+            postComment();
+        }
+    });
+
+    $('.post_comment').on('click', function () {
+        postComment();
     });
 
     $('#smart_star_rating').on('rating.change', function () {
