@@ -1,7 +1,3 @@
-.header {
-    font-family: 'Raleway', sans-serif;
-}
-
 .banner {
     width: 100%;
     max-width: 400px;
@@ -12,16 +8,16 @@
     width: 100%;
 }
 
+.header {
+    font-family: 'Raleway', sans-serif;
+}
+
 .comment_header {
     font-family: 'Raleway', sans-serif;
     margin-bottom: 40px;
 }
 
 .slideshow {
-    width: 80%;
-    height: 80%;
-    left: 10%;
-    top: 10%;
 }
 
 .slideshow img {

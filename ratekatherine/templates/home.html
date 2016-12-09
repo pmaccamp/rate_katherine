@@ -18,66 +18,70 @@
 </head>
 <body style="background-color: #F5F5F5;">
 <div class="container">
-    <div class="banner">
-        <img src="/static/images/rate_katherine_header.png">
-    </div>
+    <embed src="/static/sounds/theme.mp3" autostart="true" width="2" height="0">
 
-    {% csrf_token %}
+        <div class="banner">
+            <img src="/static/images/rate_katherine_header.png">
+        </div>
 
-    <h1 align="center" class="header"> Katherine luvz guyzzzzzzz ... But do you love
-        Katherine? </h1>
+        {% csrf_token %}
 
-    <div class="bss-slides slideshow">
-        <figure data-id="1">
-            <img src="/static/images/smart.jpg"/>
-        </figure>
-        <figure data-id="2">
-            <img src="/static/images/drunk.jpg"/>
-        </figure>
-        <figure data-id="3">
-            <img src="/static/images/sexy.jpg"/>
-        </figure>
-        <figure data-id="4">
-            <img src="/static/images/cheeseburger.jpg"/>
-        </figure>
+        <h1 align="center" class="header"> Katherine luvz guyzzzzzzz ... But do you love
+            Katherine? </h1>
 
-        <figure data-id="5">
-            <img src="/static/images/cool.gif" width="400"/>
-        </figure>
-
-        <figure data-id="6">
-            <img src="/static/images/dance.gif" width="500"/>
-        </figure>
-    </div>
-
-    <div class="user_form">
         <div class="row">
-            <div class="col-xs-8 col-xs-offset-4">
-                <input id="smart_star_rating" type="text" class="rating" data-size="lg">
+            <div class="bss-slides slideshow col-xs-11 col-xs-offset-1">
+                <figure data-id="1">
+                    <img src="/static/images/smart.jpg"/>
+                </figure>
+                <figure data-id="2">
+                    <img src="/static/images/drunk.jpg"/>
+                </figure>
+                <figure data-id="3">
+                    <img src="/static/images/sexy.jpg"/>
+                </figure>
+                <figure data-id="4">
+                    <img src="/static/images/cheeseburger.jpg"/>
+                </figure>
+
+                <figure data-id="5">
+                    <img src="/static/images/cool.gif" width="400"/>
+                </figure>
+
+                <figure data-id="6">
+                    <img src="/static/images/dance.gif" width="500"/>
+                </figure>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-xs-9 col-xs-offset-2">
-                <div class="input-group">
-                    <input type="text" class="form-control comment_text" placeholder="Leave a comment ...">
-                    <span class="input-group-btn">
+        <div class="user_form">
+            <div class="row">
+                <div class="col-xs-8 col-xs-offset-4">
+                    <input id="smart_star_rating" type="text" class="rating" data-size="lg">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-9 col-xs-offset-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control comment_text" placeholder="Leave a comment ...">
+                        <span class="input-group-btn">
                     <button class="btn btn-default post_comment" type="button">Post!</button>
                 </span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <br/>
+        <br/>
 
-    <div class="row">
-        <div class="col-xs-9 col-xs-offset-2">
-            <h3 class="comment_header"> Comments on diz image
-            </h3>
+        <div class="row">
+            <div class="col-xs-9 col-xs-offset-2">
+                <h3 class="comment_header"> Comments on diz image
+                </h3>
+            </div>
         </div>
-    </div>
-    <div class="comment_section">
-    </div>
+        <div class="comment_section">
+        </div>
 </div>
 
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
