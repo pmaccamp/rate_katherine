@@ -2,6 +2,16 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.banner {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.banner img {
+    width: 100%;
+}
+
 .comment_header {
     font-family: 'Raleway', sans-serif;
     margin-bottom: 40px;

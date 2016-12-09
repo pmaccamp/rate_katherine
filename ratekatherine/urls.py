@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^add-rating/', add_rating),
     url(r'^add-comment/', add_comment),
     url(r'^get-comments/', get_comments),
+    url(r'^get-average-rating/', get_average_rating),
     url(r'', home),
 ]

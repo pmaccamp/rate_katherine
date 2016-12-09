@@ -1,3 +1,4 @@
+from django.db.models import Avg
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -34,6 +35,11 @@ def get_comments(request):
     template = 'comments.html'
     comments_for_image = Comment.objects.filter(pic_id=request.POST["pic_id"]).order_by('-id')[:100]
     return render(request, template, {"latest_comments": comments_for_image})
+
+
+def get_average_rating(request):
+    avg_dict = Rating.objects.filter(pic_id=request.POST["pic_id"]).aggregate(Avg('rating'))
+    return HttpResponse(avg_dict["rating__avg"])
 
 
 def home(request):

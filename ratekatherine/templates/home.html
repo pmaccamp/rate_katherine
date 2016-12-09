@@ -16,7 +16,12 @@
     <link rel="stylesheet" href="/static/css/styles.css">
 
 </head>
-<body>
+<body style="background-color: #F5F5F5;">
+
+<div class="banner">
+    <img src="/static/images/rate_katherine_header.png">
+</div>
+
 {% csrf_token %}
 
 <h1 align="center" class="header"> Katherine luvz guyzzzzzzz ... But do you love
@@ -118,12 +123,12 @@
     bss = makeBSS('.slideshow');
 
     $('.bss-prev').on('click', function () {
-        clearRating();
+        updateAverageRating();
         updateComments();
     });
 
     $('.bss-next').on('click', function () {
-        clearRating();
+        updateAverageRating();
         updateComments();
     });
 
@@ -189,7 +194,22 @@
         });
     }
 
+    function updateAverageRating() {
+        var pic_id = $('.bss-show').data("id");
+        $.ajax({
+            type: 'POST',
+            url: "/get-average-rating/",
+            data: {
+                'pic_id': pic_id
+            }, success: function (average) {
+                console.log(average)
+                $('#smart_star_rating').rating('update', parseFloat(average));
+            }
+        });
+    }
+
     updateComments();
+    updateAverageRating();
 </script>
 </body>
 </html>

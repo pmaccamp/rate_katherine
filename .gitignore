@@ -30,6 +30,7 @@ Gemfile.lock
 # Logs and databases #
 ######################
 *.log
+*.sqlite3
 
 # OS generated files #
 ######################
