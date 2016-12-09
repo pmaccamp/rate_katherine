@@ -203,7 +203,6 @@
             data: {
                 'pic_id': pic_id
             }, success: function (average) {
-                console.log(average)
                 $('#smart_star_rating').rating('update', parseFloat(average));
             }
         });
